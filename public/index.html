@@ -127,6 +127,7 @@
     }
 
     // Quand le serveur nous envoie un message, on l'affiche
+    socket.on("historique", (liste) => liste.forEach(afficher));
     socket.on("message", afficher);
 
     // Quand on clique sur "Envoyer", on envoie le message au serveur
